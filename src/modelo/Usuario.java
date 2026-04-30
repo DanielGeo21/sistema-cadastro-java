@@ -9,11 +9,15 @@ package modelo;
  * @author DANIEL_5332
  */
 public class Usuario {
+
+   
     private Long id;
     private String nome;
     private String cpf;
     private String email;
     private String telefone;
+    private String celular;
+    private String rua;
 
     /**
      * @return the id
@@ -83,6 +87,32 @@ public class Usuario {
      */
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+    
+    
+    public String getCelular() {
+        return celular;
+    }
+
+    /**
+     * @param celular the celular to set
+     */
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+
+    /**
+     * @return the rua
+     */
+    public String getRua() {
+        return rua;
+    }
+
+    /**
+     * @param rua the rua to set
+     */
+    public void setRua(String rua) {
+        this.rua = rua;
     }
     
     

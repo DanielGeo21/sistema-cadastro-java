@@ -18,6 +18,8 @@ public class UsuarioDAO {
     String cpf; 
     String email; 
     String telefone; 
+    String celular;
+    String rua;
  
  
     public UsuarioDAO(){ 
@@ -25,13 +27,15 @@ public class UsuarioDAO {
 }
     
      public void adiciona(Usuario usuario){
-         String sql = "INSERT INTO usuario(nome,cpf,email,telefone) VALUES(?,?,?,?)"; 
+         String sql = "INSERT INTO usuario(nome,cpf,email,telefone,celular,rua) VALUES(?,?,?,?,?,?)"; 
 try { 
 PreparedStatement stmt = connection.prepareStatement(sql); 
 stmt.setString(1, usuario.getNome()); 
 stmt.setString(2, usuario.getCpf()); 
 stmt.setString(3, usuario.getEmail()); 
-stmt.setString(4, usuario.getTelefone()); 
+stmt.setString(4, usuario.getTelefone());
+stmt.setString(5, usuario.getCelular());
+stmt.setString(6, usuario.getRua());
 stmt.execute(); 
 stmt.close();
      }  catch (SQLException u) { 
