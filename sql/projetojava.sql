@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24/04/2026 às 02:37
+-- Tempo de geração: 01/05/2026 às 01:23
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -32,16 +32,19 @@ CREATE TABLE `usuario` (
   `nome` varchar(255) DEFAULT NULL,
   `cpf` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `telefone` varchar(255) DEFAULT NULL
+  `telefone` varchar(255) DEFAULT NULL,
+  `celular` varchar(255) DEFAULT NULL,
+  `rua` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `nome`, `cpf`, `email`, `telefone`) VALUES
-(1, 'daniel', '54214705807', 'danulek124@gmail.com', '11919888907'),
-(2, 'Flavio Assis', '1234567890', 'flavio.assis@gmail.com', '119876543');
+INSERT INTO `usuario` (`id`, `nome`, `cpf`, `email`, `telefone`, `celular`, `rua`) VALUES
+(1, 'daniel', '54214705807', 'danilek124@gmail.com', '11919888907', '11919888907', 'Rua Anesio Joao Da Silva'),
+(2, 'Flavio Assis', '1234567890', 'flavio.assis@gmail.com', '119876543', NULL, NULL),
+(3, 'Geovanna', '5421342121', 'geovanna21felicia@gmail.com', '0', '11911956118', 'Estrada dos Fischers');
 
 --
 -- Índices para tabelas despejadas
@@ -61,7 +64,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
