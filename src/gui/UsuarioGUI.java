@@ -245,7 +245,11 @@ else {
     // instanciando a classe UsuarioDAO do pacote dao e criando seu objeto dao 
     UsuarioDAO dao = new UsuarioDAO(); 
     dao.adiciona(usuarios); 
-    JOptionPane.showMessageDialog(null, "Usuário "+jTextField1.getText()+" inserido com sucesso! "); 
+    JOptionPane.showMessageDialog(null, 
+    "Usuário " + jTextField1.getText() + " cadastrado com sucesso!");
+
+new LoginGUI().setVisible(true);
+this.dispose();
 } // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
