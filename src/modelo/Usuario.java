@@ -10,6 +10,8 @@ package modelo;
  */
 public class Usuario {
 
+    
+
    
     private Long id;
     private String nome;
@@ -18,6 +20,7 @@ public class Usuario {
     private String telefone;
     private String celular;
     private String rua;
+    private String senha;
 
     /**
      * @return the id
@@ -113,6 +116,20 @@ public class Usuario {
      */
     public void setRua(String rua) {
         this.rua = rua;
+    }
+    
+    /**
+     * @return the senha
+     */
+    public String getSenha() {
+        return senha;
+    }
+
+    /**
+     * @param senha the senha to set
+     */
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
     
     
