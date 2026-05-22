@@ -6,6 +6,8 @@ package gui;
 import dao.UsuarioDAO;
 import modelo.Usuario;
 import javax.swing.JOptionPane;
+import gui.HomeGUI;
+
 
 /**
  *
@@ -171,7 +173,12 @@ private void logar() {
 
     if (usuario != null) {
         JOptionPane.showMessageDialog(this, "Login efetuado com sucesso!");
-        this.dispose();
+    // abre a Home passando o usuário logado
+    HomeGUI home = new HomeGUI(usuario);
+    home.setVisible(true);
+
+    // fecha login
+    this.dispose();
     } else {
         JOptionPane.showMessageDialog(this, "Email ou senha inválidos!");
     }
